@@ -1,0 +1,101 @@
+body {
+    font-family: 'Arial', sans-serif;
+    color: #000;
+    line-height: 1.6;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
+}
+
+header {
+    background-color: #6699CC;
+    padding: 20px;
+}
+
+h1 {
+    font-size: 36px;
+    font-weight: bold;
+    margin: 0;
+    color: #000;
+}
+
+main {
+    background-color: #f0f0f0;
+    padding: 20px;
+}
+
+h2 {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 20px 0;
+    text-align: center;
+}
+
+h3 {
+    font-size: 20px;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+p {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+ul {
+    list-style-type: disc;
+    margin-left: 20px;
+}
+
+svg {
+    background-color: #fff;
+    padding: 20px;
+    margin: 20px auto;
+    display: block;
+}
+
+div.tooltip {
+    position: absolute;
+    text-align: center;
+    width: 120px;
+    padding: 8px;
+    font-size: 14px;
+    background-color: #999;
+    color: #fff;
+    border-radius: 8px;
+    pointer-events: none;
+}
+
+button {
+    background-color: #dcdcdc;
+    color: #111;
+    font-size: 18px;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin: 10px;
+}
+
+hr {
+    border: none;
+    border-top: 1px solid #ddd;
+    margin: 40px 0;
+}
+
+.back {
+    font-size: 14px;
+    float: right;
+    margin: 5px;
+    color: #666;
+}
+
+.italic {
+    font-style: italic;
+}
+
+span {
+    padding: 2px 4px;
+    border-radius: 4px;
+}

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en-us" xmlns="">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<script src="https://d3js.org/d3.v5.min.js"></script>
+
+<head>
+    <title>Antisemitism</title>
+    <link rel="stylesheet" type="text/css" href="index.css">
+</head>
+
+<body onload="load1('antisemitism'); load2('Democracy Index'); load3();">
+    <h1 id="intro">What Sparks And Fuels Antisemitism?</h1>
+    <div>
+        <span class="italic">By Noam Isachar - UIUC CS 416 - July 2023</span>
+        <hr>
+        <h3>
+            Antisemitism or any discrimination and hostility towards a certain group doesn't happen by itself.
+            Far from being a product of happenstance, this toxic ideology thrives where the light of human rights and press freedom is dimmed.
+            In this visualization, we will see how antisemitism links and correlates with parameters that indicate about a country's well-being and freedom level.
+            For this we will use the <a href="https://global100.adl.org/map/">ADL Antisemitism Level Index</a> and plot it together with indicators
+            from the <a href="https://www.eiu.com/n/campaigns/democracy-index-2022/">EIU Democracy Index</a> and <a href="https://datatopics.worldbank.org/education/">The World Bank Education Statistics</a>.
+        </h3>
+        <ul>
+            <a href="#one" class="contents">How Common Antisemitism Is?</a>
+            <p>
+            <a href="#two" class="contents">What Comes Together With Antisemitism?</a>
+            <p>
+            <a href="#three" class="contents">Parameters Correlation</a>
+        </ul>
+        <hr>
+
+    </div>
+    <a href="#two" class="back">Next</a>
+    <h2 id="one">How Common Antisemitism Is?</h2>
+    <p>
+        See how antisemitism is spread of the countries of the world. Antisemitism Index score of 30 for example means that
+        30% of the sampled population from a country answered antisemitic answers to most of the questions in the survey and harbor antisemitic views,
+        which may not be the majority, but it is still a huge portion.
+        <p>
+        You can choose to see the distribution of the democracy level of the countries and observe how it almost mirrors the antisemitism levels.
+        This is because for antisemitism low is better and for democracy high is better, which hints that antisemitism thrives where the
+        democracy level is low, which means that access to true information and the well-being of the citizens is at risk,
+        and these circumstances nurture hate and antisemitism in particular.
+    </p>
+    <div>
+        <button id="antisemitism" onclick="change('antisemitism')">Antisemitism Index</button>
+        <button id="democracy" onclick="change('democracy')">Democracy Index</button>
+    </div>
+    <svg id="scene1" width=900 height=600></svg>
+
+    <hr>
+    <a href="#intro" class="back">Back to Top</a>
+    <a href="#three" class="back">Next</a>
+    <a href="#one" class="back">Previous</a>
+
+    <h2 id="two">What Comes Together With Antisemitism?</h2>
+    <p>
+        In the following visualization you can observe the relationship of the antisemitism level together with other parameters
+        that reflect the freedom, equality and progression of the different countries.
+        <p>
+        Pay special attention to the relationships with the female percentage of the labor force and the female unemployment percentage.
+        The strong correlation with these parameters, that indicate of discrimination towards a specific group (females in this case),
+        shows that it is no surprise that there is hate and discrimination towards another group as well (jews).
+        Hate doesn't come from nowhere. It is systematic and reflected against many minorities and weaker groups
+    </p>
+    <div>
+        <label for="columnDropdown"></label><select id="columnDropdown" onchange="load2(this.value)">
+            <option value="Democracy Index">Democracy Index</option>
+            <option value="GDP per capita (current US$)">GDP per capita (current US$)</option>
+            <option value="Labor force, female (% of total labor force)">Labor force, female (% of total labor force)</option>
+            <option value="Unemployment, total (% of total labor force)">Unemployment, total (% of total labor force)</option>
+            <option value="Unemployment, female (% of female labor force)">Unemployment, female (% of female labor force)</option>
+            <option value="Internet users (per 100 people)">Internet users (per 100 people)</option>
+        </select>
+    </div>
+    <svg id="scene2" width=900 height=600></svg>
+    <hr>
+
+    <a href="#intro" class="back">Back to Top</a>
+    <a href="#two" class="back">Previous</a>
+    <h2 id="three">Parameters Correlation</h2>
+    <p>
+        Finally, you can freely check the correlation of all the parameters against each other.
+        See how most of them are well correlated with many of them with at least 0.5 correlation.
+        With this perspective we can see the antisemitism level as just another indicator for the health of a country.
+    </p>
+    <svg id="scene3" width=1200 height=900></svg>
+
+    <!-- Script -->
+    <script src="d3.js"></script>
+
+</body>
+
+</html>
